@@ -89,5 +89,5 @@ achievementGiver({
     Title = "Give me you Figure",
     Desc = " soo hot.",
     Reason = "Survival super A60",
-    Image = "rbxassetid://12309073114"
+    Image = "rbxassetid://13905664807"
 })

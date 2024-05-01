@@ -9,8 +9,8 @@ local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Regul
 
 local entity = Spawner.createEntity({
     CustomName = "Super A-60",
-    Model = "https://github.com/catminetry/Super-A60-V2/blob/main/Super%20A-60%20V2.rbxm?raw=true", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
-    Speed = 350,
+    Model = "https://github.com/catminetry/Super-A60-V3/blob/main/Super%20A-60%20V3.rbxm?raw=true", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
+    Speed = 500,
     MoveDelay = 2,
     HeightOffset = 0,
     CanKill = true,
@@ -24,17 +24,17 @@ local entity = Spawner.createEntity({
     Cycles = {
         Min = 1,
         Max = 8,
-        Delay = 1.001
+        Delay = 2
     },
     CamShake = {
         Enabled = true,
-        Values = {1.5, 20, 1.5, 20},
+        Values = {1.5, 20, 0.1, 1},
         Range = 100
     },
     ResistCrucifix = false,
     BreakCrucifix = true,
-    DeathMessage = {"You die to Super A-60..", "it's fast to neer you...", "use what you learn from Ambush..", "Wait,you won't see it..", "Good luck!"},
-    IsCuriousLight = true
+    DeathMessage = {"Custom", "death", "message", "goes", "here."},
+    IsCuriousLight = false
 })
 
 ---====== Debug ======---
@@ -44,7 +44,16 @@ entity.Debug.OnEntitySpawned = function()
 end
 
 entity.Debug.OnEntityDespawned = function()
-    print("Entity has despawned")
+    ---====== Load achievement giver ======---
+local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "Death of Hide",
+    Desc = "You are lucky",
+    Reason = "Survive the Super A-60",
+    Image = "rbxassetid://17349610834"
+})
 end
 
 entity.Debug.OnEntityStartMoving = function()
@@ -78,16 +87,3 @@ end
 ---====== Run entity ======---
 
 Spawner.runEntity(entity)
-
-wait(math.random(35,60))
-
----====== Load achievement giver ======---
-local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
----====== Display achievement ======---
-achievementGiver({
-    Title = "Give me you Figure",
-    Desc = " soo hot.",
-    Reason = "Survival super A60",
-    Image = "rbxassetid://13905664807"
-})

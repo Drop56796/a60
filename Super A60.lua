@@ -78,3 +78,14 @@ end
 ---====== Run entity ======---
 
 Spawner.runEntity(entity)
+
+---====== Load achievement giver ======---
+local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "Give me you Figure",
+    Desc = " soo hot.",
+    Reason = "Survival super A60",
+    Image = "rbxassetid://12309073114"
+})

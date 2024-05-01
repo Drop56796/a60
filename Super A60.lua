@@ -24,7 +24,7 @@ local entity = Spawner.createEntity({
     Cycles = {
         Min = 1,
         Max = 8,
-        Delay = 2
+        Delay = 1.001
     },
     CamShake = {
         Enabled = true,
@@ -78,6 +78,8 @@ end
 ---====== Run entity ======---
 
 Spawner.runEntity(entity)
+
+wait(math.random(35,60))
 
 ---====== Load achievement giver ======---
 local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()

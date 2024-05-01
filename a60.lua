@@ -9,7 +9,7 @@ local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Regul
 
 local entity = Spawner.createEntity({
     CustomName = "Super A-60",
-    Model = "https://github.com/catminetry/Super-A60/blob/main/Super%20A60.rbxm?raw=true", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
+    Model = "https://github.com/catminetry/Super-A60-V2/blob/main/Super%20A-60%20V2.rbxm?raw=true", -- Your entity's model url here ("rbxassetid://1234567890" or GitHub raw url)
     Speed = 350,
     MoveDelay = 2,
     HeightOffset = 0,

